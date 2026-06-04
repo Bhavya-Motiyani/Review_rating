@@ -212,8 +212,12 @@ http://localhost:5000
 
 ---
 
-## 👨‍💻 Author
+## 👩‍💻 Author
 
-**Bhavya**
+**Bhavya Motiyani**  
+B.Tech in Computer Science and Engineering (Data Science Specialization)  
+Gujarat Technological University — VGEC  
+📧 *bhavyamotiyani68@gmail.com*
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/bhavya-motiyani-059544306)
 
-Deep Learning and Natural Language Processing enthusiast exploring review rating prediction, sequence models, and machine learning deployment.
+---
