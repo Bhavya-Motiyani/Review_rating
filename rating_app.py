@@ -20,13 +20,9 @@ with open("max_length.pkl", "rb") as f:
 def predict_rating(review):
 
     sequence = tokenizer.texts_to_sequences([review])
-
     padded_sequence = pad_sequences(sequence,maxlen=max_length,padding="post",truncating="post")
-
     prediction = model.predict(padded_sequence,verbose=0)
-
     predicted_rating = prediction.argmax(axis=1)[0] + 1
-
     return predicted_rating
 
 
@@ -34,18 +30,15 @@ def predict_rating(review):
 def home():
 
     predicted_rating = None
+    review_text = ""
 
     if request.method == "POST":
         review_text = request.form.get("review", "").strip()
         if review_text:
             predicted_rating = predict_rating(review_text)
 
-    return render_template("index.html",prediction=predicted_rating)
+    return render_template("index.html",prediction=predicted_rating,review_text=review_text)
 
 
 if __name__ == "__main__":
-    app.run(
-        debug=True,
-        host="0.0.0.0",
-        port=5000
-    )
+    app.run(debug=True,host="0.0.0.0",port=5000)
