@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Rating Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="card">
+
+        <h1>Review Rating Prediction</h1>
+        <p class="subtitle">
+            Predict customer review ratings using an LSTM Neural Network.
+        </p>
+
+        <form method="POST">
+
+            <textarea
+                name="review"
+                placeholder="Enter customer review..."
+                required></textarea>
+
+            <button type="submit">
+                Predict Rating
+            </button>
+
+        </form>
+
+        {% if prediction %}
+
+        <div class="result-card">
+
+            <div class="result-title">
+                Predicted Rating
+            </div>
+
+            <div class="rating-number">
+                {{ prediction }}/5
+            </div>
+
+            <div class="stars">
+                {% for i in range(prediction) %}
+                    ★
+                {% endfor %}
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
