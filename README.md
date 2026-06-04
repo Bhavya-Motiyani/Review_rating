@@ -38,7 +38,7 @@ The project demonstrates an end-to-end machine learning workflow, including:
 ```text
 Review-Rating-Prediction/
 │
-├── Jupyter Notebooks/
+├── jupyter Notebooks/
 │   ├── Project_model.ipynb
 │   └── Review_rating_explanation (Understanding).ipynb
 │
@@ -139,15 +139,15 @@ Possible reasons include:
 Several approaches were explored to improve these classes, including:
 
 - Hyperparameter tuning
-- Architectural modifications
-- Dropout adjustments
-- Epoch tuning
-- Batch size experimentation
+- Different LSTM configurations
+- Bidirectional LSTM architectures
+- Additional Dense layers
+- Dropout and recurrent dropout tuning
 - Class weighting
-- Oversampling
-- Bidirectional LSTM models
+- Oversampling minority classes
+- Epoch and batch size experimentation
 
-Despite these experiments, the model continues to struggle with consistently identifying 2-star and 3-star reviews.
+Despite these experiments, the model continues to struggle with consistently identifying 2-star and 3-star reviews. Improving the prediction quality of these middle-rating classes remains the primary challenge for future work.
 
 ---
 
